@@ -1,0 +1,15 @@
+{
+  "name": "standalone-app-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@rocket.chat/apps-engine": "file:../../../github.com/RocketChat/Rocket.Chat.Apps-engine",
+    "@rocket.chat/ui-kit": "^0.31.23"
+  }
+}
