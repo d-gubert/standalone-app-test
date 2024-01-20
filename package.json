@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@rocket.chat/apps-engine": "file:../../../github.com/RocketChat/Rocket.Chat.Apps-engine",
-    "@rocket.chat/ui-kit": "^0.31.23"
+    "@rocket.chat/ui-kit": "^0.31.23",
+    "jsonrpc-lite": "^2.2.0"
   }
 }
