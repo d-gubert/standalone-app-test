@@ -38,6 +38,10 @@ async function main() {
         EOM,
     ]);
 
+    subprocess.on('exit', (code, signal) => {
+        console.log(new Date(), `DENO EXITED WITH CODE ${code} SIGNAL ${signal}`);
+    });
+
     subprocess.stdout.on('data', (data) => {
         console.log(new Date(), `INCOMING DENO: ${data}`);
 
