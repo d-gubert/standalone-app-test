@@ -1,3 +1,4 @@
+const path = require('path');
 const { spawn } = require('child_process');
 const jsonrpc = require('jsonrpc-lite');
 
@@ -24,14 +25,14 @@ const responseNull = {"jsonrpc":"2.0","id":null,"result":null};
 // NPM configuration
 const appsEnginePath = './node_modules/@rocket.chat/apps-engine';
 const denoScriptPath = `${appsEnginePath}/deno-runtime/main.ts`;
-const denoExecutable = './node_modules/@rocket.chat/apps-engine/node_modules/deno-bin/bin/deno';
+const denoExecutable = './node_modules/deno-bin/bin/deno';
 
 const EOM = 'OkFQUF9TRVA6';
 
 async function main() {
     const subprocess = spawn(denoExecutable, [
         'run',
-        `--allow-read=${appsEnginePath}/`,
+        `--allow-read=${path.join(appsEnginePath, '..', '..')}/`,
         '--inspect',
         denoScriptPath,
         '--subprocess',
