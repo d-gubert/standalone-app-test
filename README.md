@@ -10,7 +10,7 @@ First of all the usual installation
 $ npm install
 ```
 
-The `@rocket.chat/apps-engine` package will install a deno executable at `node_modules/@rocket.chat/apps-engine/node_modules/deno-bin/bin/deno`
+The `@rocket.chat/apps-engine` package will install a deno executable at `node_modules/deno-bin/bin/deno`
 
 Then simply run `index.js`
 
