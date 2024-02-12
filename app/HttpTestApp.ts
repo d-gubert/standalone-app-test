@@ -36,7 +36,7 @@ export class HttpTestApp extends App implements IPreMessageSentExtend {
             providesPreview: false,
             executor: async (context, read, modify, http, persis) => {
                 console.log(URL);
-                return modify.getUiController().openSurfaceView({
+                await modify.getUiController().openSurfaceView({
                     type: UIKitSurfaceType.MODAL,
                     title: {
                         type: 'plain_text',
@@ -66,6 +66,10 @@ export class HttpTestApp extends App implements IPreMessageSentExtend {
                         },
                     } as ButtonElement,
                 }, {triggerId: context.getTriggerId()!}, context.getSender());
+                return {
+                    a: 'b',
+                    asd: 'asd',
+                };
                 // await http.patch('http://localhost:8080', {headers: { 'Content-Type': 'application/json' }, data: {test: 'test'}});
             },
         })
